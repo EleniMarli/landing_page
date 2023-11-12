@@ -1,0 +1,157 @@
+/* Write some CSS below */
+/* style.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: cover;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: Overpass;
+  }
+  
+  h1, h2, h3 {
+    color: #404042;
+    font-family: Chivo;
+  }
+  
+  .button-blue{
+    background-color: #1A48E3;
+    color: white;
+    padding: 16px 48px;
+    border-radius: 4px;
+    display: inline-block;
+    text-decoration: none;
+    transition: .3s;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .button-blue:hover {
+    background-color: #0D1EC6;
+    color: white;
+  }
+
+  .banner{
+    background-image: url(https://lewagon.github.io/landing-page/images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 130px;
+    text-align: center;
+  }
+
+  .banner h1 {
+    color: white;
+    font-size: 45px;
+    margin: 0px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+
+  .banner p {
+    color: rgb(216, 216, 216); 
+    font-size: 24px;
+    margin-top: 13px;
+    margin-bottom: 25px;
+  }
+
+  .container h2{
+    color: rgb(74, 74, 74);
+    margin-left: 200px;
+    margin-top: 50px;
+    margin-bottom: 30px;;
+    font-size: 27px;
+  }
+
+  .container .card-white {
+    background: white;
+    box-shadow: 0 0 16px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    width: 235px;
+    height: 320px;
+    margin: 0px;
+    padding: 20px;
+    justify-content: center;
+  }
+
+  .container .card-white img {
+    object-fit: cover;
+    width: 100%;
+    height: 180px;  
+    border-radius: 4px;
+  }
+
+  .container .card-white h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    text-align: left;
+    font-size: 21px;
+  }
+
+  .container .card-white p{
+    text-align: left;
+    color: #303030;
+    font-size: 18px;
+  }
+
+  .footer {
+    background-color: #48484a;
+    padding: 80px;
+    margin-top: 60px;
+  }
+  
+  .footer p {
+    font-size: 18px;
+    color: white;
+    margin-left: 120px;
+  }
+
+  .container .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 35px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 650px;
+    margin-right: 180px;
+  }
+
+
+  /* Cards media queries */
+@media (max-width: 800px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .card-white {
+    width: auto;
+  }
+}
+  
+/* Container media queries */
+@media (min-width: 500px) {
+  .container {
+    width: 400px;
+  }
+}
+
+@media (min-width: 800px) {
+  .container {
+    width: 600px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    width: 800px;
+  }
+}
+
