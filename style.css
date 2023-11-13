@@ -1,28 +1,37 @@
-/* Write some CSS below */
-/* style.css */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: cover;
-}
-
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 body {
     font-family: Overpass;
+    margin: 0;
+    padding:0;
+    position: relative;
   }
   
   h1, h2, h3 {
-    color: #404042;
     font-family: Chivo;
   }
-  
-  .button-blue{
+
+  .banner{
+    background-image: url(https://lewagon.github.io/landing-page/images/background.jpg) ;
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0;
+    text-align: center;
+  }
+
+  .banner h1 {
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    margin: 0px;
+  }
+
+  .banner p {
+    color: rgb(216, 216, 216); 
+    font-size: 24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .banner .button-blue {
     background-color: #1A48E3;
     color: white;
     padding: 16px 48px;
@@ -34,40 +43,29 @@ body {
     font-weight: bold;
   }
 
-  .button-blue:hover {
+  .banner .button-blue:hover {
     background-color: #0D1EC6;
-    color: white;
   }
 
-  .banner{
-    background-image: url(https://lewagon.github.io/landing-page/images/background.jpg);
-    background-size: cover;
-    background-position: center;
-    padding: 130px;
-    text-align: center;
-  }
-
-  .banner h1 {
-    color: white;
-    font-size: 45px;
-    margin: 0px;
-    margin-top: 15px;
-    margin-bottom: 30px;
-  }
-
-  .banner p {
-    color: rgb(216, 216, 216); 
-    font-size: 24px;
-    margin-top: 13px;
-    margin-bottom: 25px;
+  .container {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: 79.310px;
+    margin-right:  79.310px;
   }
 
   .container h2{
-    color: rgb(74, 74, 74);
-    margin-left: 200px;
-    margin-top: 50px;
-    margin-bottom: 30px;;
+    color: #404042;
+    margin-top: 22.41px;
+    margin-bottom: 22.41px;;
     font-size: 27px;
+  }
+
+  .container .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 32px;
+    width: 100%;
   }
 
   .container .card-white {
@@ -76,9 +74,7 @@ body {
     border-radius: 4px;
     width: 235px;
     height: 320px;
-    margin: 0px;
     padding: 20px;
-    justify-content: center;
   }
 
   .container .card-white img {
@@ -89,6 +85,7 @@ body {
   }
 
   .container .card-white h3 {
+    color: #404042;
     margin-top: 20px;
     margin-bottom: 20px;
     object-fit: cover;
@@ -104,54 +101,57 @@ body {
 
   .footer {
     background-color: #48484a;
-    padding: 80px;
-    margin-top: 60px;
+    padding: 50px;
   }
   
   .footer p {
     font-size: 18px;
     color: white;
-    margin-left: 120px;
+    margin: 18px;
   }
 
-  .container .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 35px;
-    align-items: center;
-    justify-content: center;
-    margin-left: 650px;
-    margin-right: 180px;
+/* Container media queries: */
+
+  @media (min-width: 700px) {
+    .container {
+      width: 600px;
+    }
   }
 
-
-  /* Cards media queries */
-@media (max-width: 800px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
+  @media (min-width: 300px) {
+    .container {
+      width: 400px;
+    }
   
-  .card-white {
-    width: auto;
-  }
-}
+    .container {
+      width: 900px;
+      margin: 60px auto;
+    }
   
-/* Container media queries */
-@media (min-width: 500px) {
-  .container {
-    width: 400px;
-  }
-}
+    div {
+      display: block;
+    }
+  }  
 
-@media (min-width: 800px) {
-  .container {
-    width: 600px;
-  }
-}
+/* Cards media queries: */
 
-@media (min-width: 1000px) {
-  .container {
-    width: 800px;
+  @media (min-width: 700px) {
+    .cards {
+      grid-template-columns: 1fr 1fr;
+    }
   }
-}
 
+  @media (min-width: 300px) {
+    .cards {
+      grid-template-columns: 1fr;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 16px;
+    }
+  }
+    div {
+      display: block;
+    }
